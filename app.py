@@ -3,7 +3,8 @@ import os
 # 在API密钥输入部分，修改为：
 api_key = st.sidebar.text_input("DeepSeek API Key", 
                                type="password",
-                               value=os.environ.get("DEEPSEEK_API_KEY", ""))import streamlit as st
+                               value=os.environ.get("DEEPSEEK_API_KEY", ""))
+import streamlit as st
 import requests
 import json
 import re
@@ -697,3 +698,4 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
