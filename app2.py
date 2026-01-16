@@ -1,4 +1,9 @@
-import streamlit as st
+import os
+
+# 在API密钥输入部分，修改为：
+api_key = st.sidebar.text_input("DeepSeek API Key", 
+                               type="password",
+                               value=os.environ.get("DEEPSEEK_API_KEY", ""))import streamlit as st
 import requests
 import json
 import re
@@ -690,4 +695,5 @@ st.markdown("""
         <a href="#" style="color: #667eea; text-decoration: none;">报告问题</a>
     </p>
 </div>
+
 """, unsafe_allow_html=True)
