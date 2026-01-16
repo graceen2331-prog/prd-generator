@@ -1,14 +1,13 @@
-import os
-
-# 在API密钥输入部分，修改为：
-api_key = st.sidebar.text_input("DeepSeek API Key", 
-                               type="password",
-                               value=os.environ.get("DEEPSEEK_API_KEY", ""))
 import streamlit as st
 import requests
 import json
 import re
 import time
+import os  # 这个要放在其他import之后
+
+# 2. 然后在代码中使用环境变量
+# 比如在某个函数或配置部分：
+api_key = os.environ.get("DEEPSEEK_API_KEY", "")
 
 # ========== 全局样式配置 ==========
 st.set_page_config(
@@ -698,4 +697,5 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
 
